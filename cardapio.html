@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cardápio — Pipória</title>
+  <meta name="description" content="Cardápio da Pipória: pipocas gourmet no balde, açaí na garrafa e panqueca. Escolha, monte o pedido e envie pelo WhatsApp.">
+  <meta name="theme-color" content="#0b1030">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("piporia_theme"); } catch (e) {}
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body data-page="cardapio">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="sec-night page-hero">
+      <div class="wrap">
+        <h1>Cardápio</h1>
+        <p>Escolha o item para ver os detalhes, definir o tamanho e colocar no pedido.</p>
+      </div>
+    </section>
+
+    <section class="sec-a section" style="padding-top:48px">
+      <div class="wrap">
+        <div class="filters" id="filters" role="group" aria-label="Filtrar por categoria"></div>
+        <div id="menu-root"></div>
+      </div>
+    </section>
+
+    <section class="sec-gold section cta-band" style="padding:56px 0">
+      <div class="wrap">
+        <h2 style="font-size:clamp(1.8rem,4vw,2.6rem)">Escolheu? Agora é só finalizar.</h2>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="pedido.html">Ir para o pedido</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="modal" id="item-modal" aria-label="Detalhes do item"></dialog>
+  <div id="site-footer"></div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/cardapio.js"></script>
+</body>
+</html>

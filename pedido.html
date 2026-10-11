@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Realizar pedido — Pipória</title>
+  <meta name="description" content="Revise seu pedido da Pipória e envie pelo WhatsApp.">
+  <meta name="theme-color" content="#0b1030">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("piporia_theme"); } catch (e) {}
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body data-page="pedido">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="sec-night page-hero">
+      <div class="wrap">
+        <h1>Realizar pedido</h1>
+        <p>Revise os itens, preencha seus dados e envie pelo WhatsApp.</p>
+      </div>
+    </section>
+
+    <section class="sec-a section" style="padding-top:48px">
+      <div class="wrap">
+        <div class="panel empty" id="cart-empty" hidden>
+          <h2>Seu pedido está vazio</h2>
+          <p>Escolha os sabores no cardápio e eles aparecem aqui.</p>
+          <a class="btn btn-primary" href="cardapio.html">Ir para o cardápio</a>
+        </div>
+
+        <div class="order-grid" id="cart-full" hidden>
+          <div class="panel">
+            <h2>Seus itens</h2>
+            <div id="cart-list"></div>
+            <div class="sum"><span>Total dos itens</span><strong id="cart-sum"></strong></div>
+            <p class="note">O valor da entrega, se houver, é combinado com você no WhatsApp.</p>
+            <p style="margin:18px 0 0">
+              <a class="btn btn-outline btn-sm" href="cardapio.html">Adicionar mais itens</a>
+              <button type="button" class="link-btn" id="clear-cart" style="margin-left:14px">Limpar pedido</button>
+            </p>
+          </div>
+
+          <form class="panel order-form" id="order-form" novalidate>
+            <h2>Seus dados</h2>
+            <div class="field">
+              <label for="nome">Nome</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" required>
+              <p class="err" id="err-nome" role="alert"></p>
+            </div>
+            <div class="field">
+              <span class="legend">Como você quer receber?</span>
+              <div class="opts">
+                <label class="opt"><input type="radio" name="tipo" value="retirada" checked><span>Retirar na loja</span></label>
+                <label class="opt"><input type="radio" name="tipo" value="entrega"><span>Entrega</span></label>
+              </div>
+            </div>
+            <div class="field" id="addr-field" hidden>
+              <label for="endereco">Endereço de entrega</label>
+              <input type="text" id="endereco" name="endereco" autocomplete="street-address">
+              <p class="err" id="err-end" role="alert"></p>
+            </div>
+            <div class="field">
+              <label for="obs">Observações (opcional)</label>
+              <textarea id="obs" name="obs"></textarea>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit">Enviar pedido pelo WhatsApp</button>
+            <p class="note">Ao clicar, abrimos o WhatsApp com o pedido pronto. Falta só você enviar a mensagem.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pedido.js"></script>
+</body>
+</html>

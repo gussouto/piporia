@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pipória — Pipocas gourmet no balde</title>
+  <meta name="description" content="Pipocas gourmet no balde, açaí na garrafa e panqueca em Uberlândia. Milho mushroom importado dos EUA, até dois recheios por pipoca. Peça pelo site e finalize no WhatsApp.">
+  <meta name="theme-color" content="#0b1030">
+  <link rel="icon" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () {
+      var t;
+      try { t = localStorage.getItem("piporia_theme"); } catch (e) {}
+      if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body data-page="home">
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Apresentação -->
+    <section class="sec-night hero">
+      <div class="wrap hero-grid">
+        <div>
+          <span class="eyebrow">Pipocas gourmet no balde</span>
+          <h1>Sua nova paixão <em>intergaláctica</em> tem gosto de pipoca.</h1>
+          <p class="lead">Milho mushroom importado dos EUA, caramelizado e servido no balde com o recheio que você escolher. Monte o pedido aqui e a gente confirma tudo pelo WhatsApp.</p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="cardapio.html">Escolher meus sabores</a>
+            <a class="btn btn-outline" href="pedido.html">Ver meu pedido</a>
+          </div>
+          <ul class="hero-facts">
+            <li>Milho importado</li>
+            <li>Selecionada uma a uma</li>
+            <li>Até 2 recheios por balde</li>
+          </ul>
+        </div>
+        <div class="hero-art">
+          <div class="disc"><img src="img/galeria-2.jpg" alt="Balde de pipoca gourmet coberto de chocolate ao leite" fetchpriority="high"></div>
+          <div class="hero-tag">Balde de 500 ml ou 1 L<small>a partir de R$ 26,00</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Por que Pipória -->
+    <section class="sec-a section">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Por que Pipória</span>
+          <h2>Pipoca não é tudo igual.</h2>
+          <p class="lead">A diferença começa no milho e continua em cada detalhe do balde.</p>
+        </div>
+        <div class="pillars">
+          <div class="pillar">
+            <div class="num">01</div>
+            <h3>Milho mushroom, direto dos EUA</h3>
+            <p>Redondinha e crocante, a pipoca aguenta calda de caramelo e chocolate sem murchar.</p>
+          </div>
+          <div class="pillar">
+            <div class="num">02</div>
+            <h3>Escolhida uma a uma</h3>
+            <p>Antes de montar o seu balde, a gente seleciona as pipocas individualmente.</p>
+          </div>
+          <div class="pillar">
+            <div class="num">03</div>
+            <h3>Até dois recheios por balde</h3>
+            <p>São sete sabores com nome de planeta. Fique com um ou combine dois.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section class="sec-b section" aria-labelledby="gal-t">
+      <div class="wrap section-head">
+        <div>
+          <span class="eyebrow">Direto da cozinha</span>
+          <h2 id="gal-t">Dá uma olhada no que sai daqui</h2>
+        </div>
+        <a class="btn btn-primary" href="cardapio.html">Ver cardápio completo</a>
+      </div>
+      <div class="marquee" aria-label="Fotos dos produtos da Pipória">
+        <div class="marquee-track" id="marquee-track"></div>
+      </div>
+    </section>
+
+    <!-- Sabores -->
+    <section class="sec-a section">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow">Clássicos</span>
+          <h2>Sete planetas para provar</h2>
+          <p class="lead">Toque em um sabor para ver os detalhes e colocar no pedido.</p>
+        </div>
+        <div class="flavors" id="flavors"></div>
+      </div>
+    </section>
+
+    <!-- Como chegar -->
+    <section class="sec-b section" id="como-chegar">
+      <div class="wrap">
+        <span class="eyebrow">Como chegar</span>
+        <h2>Venha buscar o seu balde</h2>
+        <div class="where">
+          <div class="where-info">
+            <address>Av. Solidariedade, 1230<br>Uberlândia - MG</address>
+            <div class="btn-row">
+              <a class="btn btn-primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Av.+Solidariedade%2C+1230%2C+Uberl%C3%A2ndia+-+MG">Traçar rota</a>
+              <a class="btn btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Av.+Solidariedade%2C+1230%2C+Uberl%C3%A2ndia+-+MG">Abrir no Google Maps</a>
+            </div>
+            <p class="note" style="margin-top:18px">Dúvida sobre horário de funcionamento? Chame a gente no WhatsApp.</p>
+          </div>
+          <div class="map-frame">
+            <iframe title="Mapa da Pipória: Av. Solidariedade, 1230, Uberlândia - MG" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Av.+Solidariedade%2C+1230%2C+Uberl%C3%A2ndia+-+MG&output=embed"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chamada final -->
+    <section class="sec-gold section cta-band">
+      <div class="wrap">
+        <h2>Onde TUDO vira EXPERIÊNCIA.</h2>
+        <p>Escolha os sabores, monte o pedido e envie pelo WhatsApp. A gente confirma tudo com você por lá.</p>
+        <div class="btn-row">
+          <a class="btn btn-primary" href="cardapio.html">Fazer meu pedido</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
